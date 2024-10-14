@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-//import 'package:MYAPP/pages/home_page.dart';
+import 'package:myapp/pages/home_page.dart';
 
 class TelaCategoria extends StatefulWidget {
   const TelaCategoria({super.key});
@@ -127,16 +127,15 @@ class _TelaCategoriaState extends State<TelaCategoria> {
                       Column(
                         children: [
                           InkWell(
-                            //onTap: () {
-                              //Navigator.push(
-                              //  context,
-                              //  MaterialPageRoute(builder: (context) {
-                              //    return HomePage();
-                              //  }),
-                            //  ),
-                           // },
-                           child:
-                             ClipRRect(
+                            onTap: () {
+                              Navigator.push(
+                                context,
+                                MaterialPageRoute(builder: (context) {
+                                  return HomePage();
+                                }),
+                              );
+                            },
+                            child: ClipRRect(
                               borderRadius: BorderRadius.circular(10.0),
                               child: Image.network(
                                 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRt3dn8sVNpjaFCmEzy9Ll86zoD7qNY0BXaVQ&s',
